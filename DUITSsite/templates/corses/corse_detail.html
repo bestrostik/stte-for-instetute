@@ -1,0 +1,12 @@
+<h1>{{ corse.titel }}</h1>
+<p>{{ corse.description }}</p>
+<h2>Матеріали:</h2>
+<ul>
+  {% for material in materials %}
+    <li>
+      {{ material.title }} (Завантажено: {{ material.uploaded_at }})
+      <a href="{{ material.file.url }}">Завантажити</a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'add_material' %}">Додати матеріал</a>

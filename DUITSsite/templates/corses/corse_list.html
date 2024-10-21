@@ -1,0 +1,8 @@
+<h1>Список курсів</h1>
+<ul>
+  {% for corse in corses %}
+    <li>
+      <a href="{% url 'corse_detail' corse.pk %}">{{ corse.titel }}</a>
+    </li>
+  {% endfor %}
+</ul>
